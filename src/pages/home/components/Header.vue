@@ -1,21 +1,32 @@
 <template>
   <div class="header">
     <div class="header-left">
-        <div class="iconfont back-icon">&#xe624;</div>
+      <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input">
-        <span class="iconfont">&#xe632;</span>
-        输入城市/景点/游玩主题</div>
-    <div class="header-right">
-        城市
-        <span class="iconfont arrow-icon">&#xe600;</span>
+      <span class="iconfont">&#xe632;</span>
+      输入城市/景点/游玩主题
     </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont arrow-icon">&#xe600;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  },
+  data () {
+    return {
+
+    }
+  }
 }
 </script>
 
@@ -46,6 +57,7 @@ export default {
       width 1.24rem
       float left
       text-align center
+      color #FFF
       .arrow-icon
         font-size .24rem
         margin-left -0.04rem
