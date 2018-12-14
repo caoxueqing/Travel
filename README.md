@@ -1,3 +1,6 @@
+模仿去哪网旅游APP开发的demo
+vue-router -- vuex -- swiper -- better-scroll
+
 # travel
 
 > vueStuday
