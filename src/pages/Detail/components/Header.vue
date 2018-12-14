@@ -49,6 +49,9 @@ export default {
     },
     activated() {
         window.addEventListener('scroll', this.handleScroll)
+    },
+    deactivated () {
+        window.removeEventListener('scroll', this.handleScroll)
     }
 }
 </script>
@@ -69,6 +72,7 @@ export default {
         color #ffffff
         font-size .4rem
 .header-fixed
+    z-index 2
     position fixed
     top 0
     left 0
